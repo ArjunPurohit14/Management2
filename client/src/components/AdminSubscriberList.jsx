@@ -7,7 +7,7 @@ const AdminSubscriberList = () => {
   useEffect(() => {
     const fetchSubscribers = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/subscribers');
+        const response = await axios.get('https://management2-ot8m.onrender.com/api/subscribers');
         setSubscribers(response.data);
       } catch (error) {
         console.error('Error fetching subscribers:', error);

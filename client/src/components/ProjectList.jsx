@@ -7,7 +7,7 @@ const ProjectList = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/projects');
+        const response = await axios.get('https://management2-ot8m.onrender.com/api/projects');
         setProjects(response.data);
       } catch (error) {
         console.error('Error fetching projects:', error);

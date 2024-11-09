@@ -8,7 +8,7 @@ const SubscribeForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/subscribers', { email });
+      const response = await axios.post('https://management2-ot8m.onrender.com/api/subscribers', { email });
       alert('Subscribed successfully');
     } catch (error) {
       console.error('Error subscribing:', error);

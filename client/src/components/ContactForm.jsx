@@ -18,7 +18,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/contact', formData);
+      const response = await axios.post('https://management2-ot8m.onrender.com/api/contact', formData);
       alert("Form submitted successfully");
       setFormData({ fullName: '', email: '', mobileNumber: '', city: '' });
     } catch (error) {

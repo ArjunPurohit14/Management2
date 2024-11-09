@@ -38,7 +38,7 @@ const ProjectUploadForm = () => {
     data.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:5001/api/projects', data, {
+      const response = await axios.post('https://management2-ot8m.onrender.com/api/projects', data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
      

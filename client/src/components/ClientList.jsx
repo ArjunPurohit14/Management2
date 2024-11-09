@@ -7,7 +7,7 @@ const ClientList = () => {
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/clients');
+        const response = await axios.get('https://management2-ot8m.onrender.com/api/clients');
         setClients(response.data);
       } catch (error) {
         console.error('Error fetching clients:', error);

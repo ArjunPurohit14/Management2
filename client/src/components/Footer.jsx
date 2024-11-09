@@ -10,7 +10,7 @@ const LandingHeaderFooter = () => {
   const handleSubscribe = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/api/subscribers', { email });
+      await axios.post('https://management2-ot8m.onrender.com/api/subscribers', { email });
       alert('Subscribed successfully');
       setEmail(''); // Clear the email input field
     } catch (error) {

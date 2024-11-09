@@ -16,7 +16,7 @@ const _dirname = path.resolve();
 
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || origin.startsWith('http://localhost')) {
+    if (!origin || origin.startsWith('https://management2-ot8m.onrender.com')) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));

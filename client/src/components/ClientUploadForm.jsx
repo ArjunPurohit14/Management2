@@ -31,7 +31,7 @@ const ClientUploadForm = () => {
     if (image) data.append('image', image);  // Append image file
 
     try {
-      await axios.post('http://localhost:5001/api/clients', data, {
+      await axios.post('https://management2-ot8m.onrender.com/api/clients', data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert('Client added successfully');

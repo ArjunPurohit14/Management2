@@ -8,7 +8,7 @@ const AdminContactList = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/contact'); // Ensure the port matches your backend setup
+        const response = await axios.get('https://management2-ot8m.onrender.com/api/contact'); // Ensure the port matches your backend setup
         setContacts(response.data);
       } catch (error) {
         console.error('Error fetching contact data:', error);
