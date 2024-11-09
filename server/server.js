@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -9,6 +10,7 @@ require('dotenv').config();
 
 const app = express();
 
+const _dirname = path.resolve();
 // Use CORS middleware
 
 
@@ -21,6 +23,7 @@ app.use(cors({
     }
   }
 }));
+
 
 app.use(express.json());  // For parsing application/json
 
@@ -41,6 +44,12 @@ app.use('/api/contact', contactRoute);
 
 // Use the subscriber route
 app.use('/api/subscribers', subscriberRoute);
+
+app.use(express.static(path.join(_dirname, '/client/dist')));
+
+app.get('*', (_, res) => {
+  res.sendFile(path.join(_dirname, '/client/dist/index.html'));
+});
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
